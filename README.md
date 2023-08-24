@@ -165,6 +165,14 @@ Pointer arithmetic is the arithmetic operation on pointers. There are four arith
 - `--Pointer` : Almost same as `Pointer--`.
 
 
+#### Internal Calculation of Pointer Arithmetic
+
+Example : let `p` be a pointer to an integer and `i` be an integer.
+
+- `p + i` is equivalent to `p + i * sizeof(int)`.
+- `p - i` is equivalent to `p - i * sizeof(int)`.
+- `p++` is equivalent to `p = p + sizeof(int)`.
+and so on.
 
 ### The Subscript Operator `[]`
 Access array elements using the subscript operator ```[]```.
